@@ -1,0 +1,28 @@
+PROCEDURE dotproduct( V1 : ARRAY_OF INTEGER[3]; V2 : ARRAY_OF INTEGER[3]; )
+VAR
+i: INTEGER;
+ps:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        write("donner le vecteur v1")
+        read(V1[i])
+        write("donner le vecteur u1")
+        read(U1[i])
+        END_FOR  
+        FOR i FROM 0 TO 2 STEP 1  DO
+            ps:= ps +  V1(i) * U1(i)
+            write("le produit scalaire de vecteurs v1 et v2 est":,ps)
+        END_FOR
+END
+ALGORITHM orthogonal
+VAR
+result:INTEGER:=0
+BEGIN
+result:=dotproduct( V1;V2)
+    IF (result:=0) THEN
+       write("V1 et V2 sont deux vecteurs orthogonaux")
+    ELSE
+        write("V1 et V2 ne sont pas orthogonaux")
+   
+    END_IF
+END
